@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "gilroy";
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  height: 100vh;
+  width: 100%;
+}
+
+#back {
+  width: 100%;
+  height: 100vh;
+  background-color: aqua;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+#back img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#top {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+#workarea {
+  width: 90%;
+  max-width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+#nav-bar {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+#right-nav {
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#right-nav img {
+  height: 40px;
+}
+
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+}
+li {
+  list-style: none;
+}
+li a {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+li a:hover {
+  color: brown;
+}
+
+#left-nav {
+  width: auto;
+  color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#lhero {
+  flex: 1;
+  min-width: 280px;
+}
+#lhero .elem {
+  height: 9vh;
+  position: relative;
+  overflow: hidden;
+}
+#lhero .elem h1:nth-child(1) {
+  top: 0;
+}
+#lhero .elem h1 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  line-height: .9;
+  font-family: "kajiro";
+  color: #fff;
+  font-weight: 100;
+  font-size: clamp(32px, 10vw, 100px);
+}
+#lhero button {
+  font-family: "kajiro";
+  padding: .8em 2em;
+  margin-top: 2vh;
+  font-size: clamp(16px, 4vw, 28px);
+  cursor: pointer;
+}
+
+#rhero {
+  flex: 0.5;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: #fff;
+}
+#rhero p {
+  margin-bottom: 30px;
+  text-align: right;
+  font-weight: 100;
+}
+#imagediv {
+  height: 150px;
+  width: 100%;
+  max-width: 250px;
+  background-image: url(./IMG_7567.JPG);
+  background-size: cover;
+  background-position: top;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+/* =================== Responsive Media Queries =================== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  #nav-bar {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+  }
+  ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #rhero {
+    align-items: center;
+  }
+  #rhero p {
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  #nav-bar {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  li a {
+    font-size: 10px;
+  }
+  #hero {
+    top: 55%;
+    gap: 15px;
+  }
+  #lhero .elem h1 {
+    font-size: clamp(28px, 12vw, 60px);
+  }
+  #lhero button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+  #rhero {
+    width: 100%;
+    align-items: center;
+  }
+  #imagediv {
+    width: 80%;
+    height: 120px;
+  }
+}
