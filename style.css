@@ -109,7 +109,7 @@ li a:hover {
   min-width: 280px;
 }
 #lhero .elem {
-  height: 9vh;
+  height: 13vh;
   position: relative;
   overflow: hidden;
 }
@@ -120,7 +120,7 @@ li a:hover {
   position: absolute;
   top: 100%;
   left: 0;
-  line-height: .9;
+  line-height: -0.1;
   font-family: "kajiro";
   color: #fff;
   font-weight: 100;
